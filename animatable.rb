@@ -18,6 +18,7 @@ module Animatable
 
     #
     # Convenience method to get the animations
+    # --This can probably be an attr_reader--
     def animations
       @animations
     end
@@ -64,7 +65,7 @@ module Animatable
     def frame_cell(i)
       index = start + i
 
-      [(index / columns).to_i, index % columns]
+      [index.idiv(columns), index % columns]
     end
   end
 
