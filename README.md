@@ -58,8 +58,11 @@ folder(directory, ext:, tile_w:, tile_h:)
 ```
 
 `directory` - The directory your sheets are located in
+
 `ext` - The extension your sheets are (.png, .jpeg, etc.)
+
 `tile_w` - Tile width override
+
 `tile_h` - Tile height override
 
 
