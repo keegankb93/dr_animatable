@@ -18,7 +18,6 @@ module Animatable
 
     #
     # Convenience method to get the animations
-    # --This can probably be an attr_reader--
     def animations
       @animations
     end
