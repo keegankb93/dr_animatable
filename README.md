@@ -76,10 +76,15 @@ anim(name, frames:, columns: nil, start: [0, 0], start_frame: 0, hold_for: 3, re
 > Animation name MUST match the file name (this is how we look it up). It is also how you reference the animation when you want to play the animation.
 
 `frames` - the number of frames the animation is
+
 `columns` - the number of columns in the spritesheet
+
 `start` - The first frame of the animation, this is the row/col [0, 0] represents the top-left and moves left-to-right as most spritesheets
+
 `start_frame` - The frame to start on (use this to start directly into a walking animation etc. if the animation has a neutral frame)
+
 `hold_for` - How long to hold each animation for (this speeds or slows the animation speed)
+
 `repeat` - Loop the animation
 
 ### Sheet (multiple animations per sheet)
@@ -92,15 +97,21 @@ anim(name, frames:, columns: nil, start: [0, 0], start_frame: 0, hold_for: 3, re
   end
 ```
 
+
 ```ruby 
 anim(name, start:, frames:, start_frame: 0, hold_for: 3, repeat: true)
 ```
 
 `name` - Animation name
+
 `start` - The first frame of the animation, this is the row/col [0, 0] represents the top-left and moves left-to-right as most spritesheets
+
 `frames` - the number of frames the animation is
+
 `start_frame` - The frame to start on (use this to start directly into a walking animation etc. if the animation has a neutral frame)
+
 `hold_for` - How long to hold each animation for (this speeds or slows the animation speed)
+
 `repeat` - Loop the animation
 
 ### Flipping an animation
