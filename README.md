@@ -54,7 +54,7 @@ Mainly, the spritesheets I come across come in two different forms.
 ```
 
 ```ruby 
-folder(directory, ext:, tile_w:, tile_h:)
+def folder(directory, ext:, tile_w:, tile_h:); end
 ```
 
 `directory` - The directory your sheets are located in
@@ -67,7 +67,7 @@ folder(directory, ext:, tile_w:, tile_h:)
 
 
 ```ruby 
-anim(name, frames:, columns: nil, start: [0, 0], start_frame: 0, hold_for: 3, repeat: true)
+def anim(name, frames:, columns: nil, start: [0, 0], start_frame: 0, hold_for: 3, repeat: true); end
 ```
 
 `name` - Animation name
@@ -99,7 +99,7 @@ anim(name, frames:, columns: nil, start: [0, 0], start_frame: 0, hold_for: 3, re
 
 
 ```ruby 
-anim(name, start:, frames:, start_frame: 0, hold_for: 3, repeat: true)
+def anim(name, start:, frames:, start_frame: 0, hold_for: 3, repeat: true); end
 ```
 
 `name` - Animation name
@@ -128,7 +128,9 @@ This is defaulted to false in the module.
 
 ### Playing an animation
 
-```play_animation(name)```
+```ruby
+def play_animation(name); end
+```
 
 ```ruby
 facing = :down
