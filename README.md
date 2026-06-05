@@ -40,7 +40,7 @@ Mainly, the spritesheets I come across come in two different forms.
 
 ### Folder (1 sheet per animation)
 
-```
+```ruby
   define_animations(tile_w: 16, tile_h: 16) do
     folder('sprites/characters/player') do
       anim :idle_up,   frames: 1, hold_for: 1
