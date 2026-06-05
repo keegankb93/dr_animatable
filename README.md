@@ -53,7 +53,9 @@ Mainly, the spritesheets I come across come in two different forms.
   end
 ```
 
-`folder(directory, ext:, tile_w:, tile_h:)`
+```ruby 
+folder(directory, ext:, tile_w:, tile_h:)
+```
 
 `directory` - The directory your sheets are located in
 `ext` - The extension your sheets are (.png, .jpeg, etc.)
@@ -61,7 +63,9 @@ Mainly, the spritesheets I come across come in two different forms.
 `tile_h` - Tile height override
 
 
-`anim(name, frames:, columns: nil, start: [0, 0], start_frame: 0, hold_for: 3, repeat: true)`
+```ruby 
+anim(name, frames:, columns: nil, start: [0, 0], start_frame: 0, hold_for: 3, repeat: true)
+```
 
 `name` - Animation name
 
@@ -85,7 +89,9 @@ Mainly, the spritesheets I come across come in two different forms.
   end
 ```
 
-```anim(name, start:, frames:, start_frame: 0, hold_for: 3, repeat: true)```
+```ruby 
+anim(name, start:, frames:, start_frame: 0, hold_for: 3, repeat: true)
+```
 
 `name` - Animation name
 `start` - The first frame of the animation, this is the row/col [0, 0] represents the top-left and moves left-to-right as most spritesheets
