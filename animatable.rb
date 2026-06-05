@@ -50,8 +50,6 @@ module Animatable
 
     #
     # Convenience method to get the number of frames in this animation.
-    # This is more descriptive of what frames actually is, but maybe should just get rid of it
-    # as it's kind of just an abstraction at this point
     def frame_count
       frames
     end
@@ -173,7 +171,10 @@ module Animatable
   # args.outputs.sprites << Object.animation_sprite
   def animation_sprite
     animation = animations.fetch(current_animation)
-    row, col = animation.frame_cell(animation_frame_index(animation))
+
+    # Hold last frame if animation is done
+    index = animation_frame_index(animation) || (animation.frame_count - 1)
+    row, col = animation.frame_cell(index)
 
     {
       x: x.to_i,
@@ -187,6 +188,18 @@ module Animatable
       tile_h: animation.tile_h,
       flip_horizontally: flip_animation?
     }
+  end
+
+  #
+  # If no repeat animation_frame_index is nil, the animation is finished.
+  def animation_finished?
+    return false unless animation_started_at
+
+    animation = animations.fetch(current_animation)
+
+    return false if animation.repeat
+
+    animation_frame_index(animation).nil?
   end
 
   #
