@@ -154,3 +154,11 @@ This module stores your animations when the class is loaded and saves those anim
   modify_animations(:idle_up, :idle_down, :idle_side, speed: 0)
 ```
 
+### Animation state
+
+```ruby
+def animation_finished?;end
+```
+
+If you set your animation to `repeat: false` this will return true when your animation is done playing. The animation will hold its last frame.
+
