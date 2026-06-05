@@ -18,7 +18,6 @@ module Animatable
 
     #
     # Convenience method to get the animations
-    # --This can probably be an attr_reader--
     def animations
       @animations
     end
@@ -51,6 +50,8 @@ module Animatable
 
     #
     # Convenience method to get the number of frames in this animation.
+    # This is more descriptive of what frames actually is, but maybe should just get rid of it
+    # as it's kind of just an abstraction at this point
     def frame_count
       frames
     end
